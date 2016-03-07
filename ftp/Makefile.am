@@ -30,7 +30,7 @@ wviewftpd_SOURCES  = \
 
 
 # define libraries
-wviewftpd_LDADD   = -lssl -lcurl
+wviewftpd_LDADD   = -lcurl
 
 # define library directories
 wviewftpd_LDFLAGS = -L$(prefix)/lib -L$(prefix)/usr/lib -L/usr/lib

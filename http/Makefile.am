@@ -35,7 +35,7 @@ wvhttpd_SOURCES  = \
 
 
 # define libraries
-wvhttpd_LDADD     = -lssl -lcurl
+wvhttpd_LDADD     = -lcurl
 
 # define library directories
 wvhttpd_LDFLAGS   = -L$(prefix)/lib -L$(prefix)/usr/lib -L/usr/lib
