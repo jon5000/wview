@@ -59,15 +59,15 @@ AM_CONDITIONAL([FREEBSD], [test x$os_freebsd = xyes])
 
 
 # Checks for libraries.
-AC_CHECK_LIB([c], [strncpy], [], [echo "libc is missing!";exit -1])
-AC_CHECK_LIB([gd], [gdImageCreate], [], [echo "libgd is missing!";exit -1])
+AC_CHECK_LIB([c], [strncpy], [true], [echo "libc is missing!";exit -1])
+AC_CHECK_LIB([gd], [gdImageCreate], [true], [echo "libgd is missing!";exit -1])
 AC_CHECK_LIB([m], [exp], [], [echo "libm is missing!";exit -1])
-AC_CHECK_LIB([png], [png_write_chunk], [], [echo "libpng is missing!";exit -1])
-AC_CHECK_LIB([sqlite3], [sqlite3_open], [], [echo "libsqlite3 is missing!";exit -1])
-AC_CHECK_LIB([pthread], [pthread_create], [], [echo "libpthread is missing!";exit -1])
+AC_CHECK_LIB([png], [png_write_chunk], [true], [echo "libpng is missing!";exit -1])
+AC_CHECK_LIB([sqlite3], [sqlite3_open], [true], [echo "libsqlite3 is missing!";exit -1])
+AC_CHECK_LIB([pthread], [pthread_create], [true], [echo "libpthread is missing!";exit -1])
 AC_CHECK_LIB([rad], [radthreadLock], [], [echo "librad is missing or old version!";exit -1])
-AC_CHECK_LIB([curl], [curl_easy_init], [], [echo "libcurl is missing!";exit -1])
-AC_CHECK_LIB([z], [inflate], [], [echo "libz is missing!";exit -1])
+AC_CHECK_LIB([curl], [curl_easy_init], [true], [echo "libcurl is missing!";exit -1])
+AC_CHECK_LIB([z], [inflate], [true], [echo "libz is missing!";exit -1])
 
 # Checks for header files.
 AC_HEADER_STDC

@@ -59,8 +59,8 @@ else
 wviewd_wh1080_SOURCES	+= $(top_srcdir)/stations/common/hidapi-linux.c
 wviewd_wh1080_LDFLAGS	= -L$(prefix)/lib -L/usr/lib -L/usr/local/lib
 if FREEBSD
-wviewd_wh1080_LDADD		= -lusb
+wviewd_wh1080_LDADD		= -lusb -lpthread
 else
-wviewd_wh1080_LDADD		= -lusb-1.0
+wviewd_wh1080_LDADD		= -lusb-1.0 -lpthread
 endif
 endif

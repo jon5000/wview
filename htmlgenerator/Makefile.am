@@ -63,7 +63,7 @@ htmlgend_SOURCES   = \
 
 
 # define libraries
-htmlgend_LDADD   =
+htmlgend_LDADD   = -lgd
 
 # define library directories
 htmlgend_LDFLAGS = -L$(prefix)/lib -L$(prefix)/usr/lib -L/usr/lib

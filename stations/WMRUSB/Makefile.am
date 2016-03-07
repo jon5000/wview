@@ -58,8 +58,8 @@ else
 wviewd_wmrusb_SOURCES	+= $(top_srcdir)/stations/common/hidapi-linux.c
 wviewd_wmrusb_LDFLAGS	= -L$(prefix)/lib -L/usr/lib -L/usr/local/lib
 if FREEBSD
-wviewd_wmrusb_LDADD		= -lusb
+wviewd_wmrusb_LDADD		= -lusb -lpthread
 else
-wviewd_wmrusb_LDADD		= -lusb-1.0
+wviewd_wmrusb_LDADD		= -lusb-1.0 -lpthread
 endif
 endif

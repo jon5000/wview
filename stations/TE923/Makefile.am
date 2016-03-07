@@ -59,8 +59,8 @@ else
 wviewd_te923_SOURCES	+= $(top_srcdir)/stations/common/hidapi-linux.c
 wviewd_te923_LDFLAGS	= -L$(prefix)/lib -L/usr/lib -L/usr/local/lib
 if FREEBSD
-wviewd_te923_LDADD		= -lusb
+wviewd_te923_LDADD		= -lusb -lpthread
 else
-wviewd_te923_LDADD		= -lusb-1.0
+wviewd_te923_LDADD		= -lusb-1.0 -lpthread
 endif
 endif
